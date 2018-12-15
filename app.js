@@ -9,14 +9,10 @@ app.get('/*', (req, res) => {
   res.sendFile(join(__dirname, 'build', 'index.html'))
 })
 
-if (require.main === module) {
-  const PORT = process.env.NODE_ENV === 'production' ? process.env.PROD_PORT : 3064
-  app.listen(PORT, '0.0.0.0', (err) => {
-    if (err) {
-      console.log(err)
-    }
-    console.info(`==> listening on http://localhost:${PORT}.`)
-  })
-}
-
-module.exports = app
+const PORT = process.env.NODE_ENV === 'production' ? process.env.PROD_PORT : 3064
+app.listen(PORT, '0.0.0.0', (err) => {
+  if (err) {
+    console.log(err)
+  }
+  console.info(`==> listening on http://localhost:${PORT}.`)
+})

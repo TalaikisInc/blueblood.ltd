@@ -11,4 +11,4 @@ echo 'Building...'
 PORT=3064 npm run build
 
 echo 'Starting server.' 
-PORT=3064 pm2 start ./index.js --name blueblood
+pm2 start ./index.js --name server --watch -i max
