@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 const Head = (props) => (
   <Helmet>
     <meta charSet="utf-8" />
-    <title>{ props.title } | BlueBlood</title>
+    <title>{ props.title } | BlueBlood Web Development</title>
   </Helmet>
 )
 

@@ -1,2 +1,0 @@
-webpackJsonp([5],{149:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n(0),l=n.n(a),r={textAlign:"center",padding:"10%"},o={fontSize:"0.8em",fontFamily:"'Open Sans', sans-serif"},s=function(){return l.a.createElement("div",{style:r},l.a.createElement("p",{style:o},"\xa9 2018, ",l.a.createElement("a",{href:"https://blueblood.ltd"},"Blue Blood")))};t.default=s}});
-//# sourceMappingURL=5.ce4e067e.chunk.js.map

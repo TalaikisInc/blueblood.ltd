@@ -1,9 +1,6 @@
 import React, { PureComponent } from 'react'
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
 
-import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown,
-  DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
+import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
@@ -63,30 +60,6 @@ class Header extends PureComponent {
                   <FontAwesomeIcon style={style} icon={faTwitter} />
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="/partners" style={style}>
-                  Partnership
-                </NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret style={style}>
-                  Token
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    <Link to="/token">Market Info</Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link to="/not_implemented">Indices</Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link to="/not_implemented">Performance</Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link to="/not_implemented">Buy</Link>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
@@ -95,8 +68,4 @@ class Header extends PureComponent {
   }
 }
 
-function mapStateToProps(state) {
-  return { }
-}
-
-export default connect(mapStateToProps)(Header)
+export default Header

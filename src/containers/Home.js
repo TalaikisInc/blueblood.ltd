@@ -1,12 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import { Container } from 'reactstrap'
 
 import Async from 'components/Async'
 import logo from 'assets/img/logo.svg'
-const Section = Async(() => import('components/Section'))
-const Subscribe = Async(() => import('components/Subscribe'))
 const Head = Async(() => import('components/Head'))
+const ContactUs = Async(() => import('components/ContactUs'))
 
 const style = {
   padding: '10%',
@@ -17,22 +15,38 @@ const h1 = {
   color: 'white'
 }
 
+const white = {
+  backgroundColor: 'white'
+}
+
 const Home = () => (
   <div>
     <Container>
       <Head title="Home" />
       <div style={style}>
-        <img src={logo} width="80%" height="80%" alt="Blue Blood Indices" />
-        <h1 className="display-4" style={h1}>We are building tokenized quantitative trading strategies indexes</h1>
-        <Subscribe />
+        <img src={logo} width="80%" height="80%" alt="Blue Blood Web Development" />
+        <h1 className="display-4" style={h1}>Modern Web Development</h1>
       </div>
-      <Section />
     </Container>
+    <div style={white}>
+      <Container>
+        <Head title="Home" />
+        <div style={style}>
+          <h1 className="display-4">Our values</h1>
+          <p className="lead">We believe in automation, data driven decisions and simplicity.</p>
+        </div>
+      </Container>
+    </div>
+    <Container>
+      <div style={style}>
+        <h1 className="display-4" style={h1}>Technologies</h1>
+        <p className="lead" style={h1}>We work with Node.js and React.js as our main components for web apps,
+        universal web apps, mobile apps, and RESTful and GraphQL APIs. For machine learning and other CPU intensive 
+        tasks, and deployments, on the other hand, we most often use Python.</p>
+      </div>
+    </Container>
+    <ContactUs />
   </div>
 )
 
-function mapStateToProps(state) {
-  return { }
-}
-
-export default connect(mapStateToProps)(Home)
+export default Home

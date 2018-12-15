@@ -1,3 +1,4 @@
+import 'react-app-polyfill/ie11'
 import React from 'react'
 import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -8,7 +9,6 @@ import reducers from 'reducers'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import App from 'containers/App'
 import registerServiceWorker from './registerServiceWorker'
-// import { unregister } from './registerServiceWorker'
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore)
 
 ReactDOM.render(
@@ -21,4 +21,3 @@ ReactDOM.render(
 )
 
 registerServiceWorker()
-// unregister()
