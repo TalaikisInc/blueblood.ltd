@@ -2,7 +2,7 @@ import React, { PureComponent, Fragmwnt } from 'react'
 import { post } from 'axios'
 import { Button, Form, Input, Label, Col, Row } from 'reactstrap'
 
-const apiUrl = 'https://mail.identiform.com'
+const apiUrl = 'https://mail.talaikis.com'
 const apiKey = process.env.REACT_APP_API_KEY
 
 const style = {
@@ -73,7 +73,7 @@ export default class ContactUs extends PureComponent {
         if (res.data.status === 'sent') {
           this.setState({ sent: true })
         } else {
-          this.setState({ sent: false, error: 'Some error sending email.' })
+          this.setState({ sent: false, error: res.data.status })
         }
       }).catch((error) => {
         this.setState({ error:  error.message })

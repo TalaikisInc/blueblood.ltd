@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react'
 import { Container } from 'reactstrap'
 
 import Async from 'components/Async'
@@ -20,7 +20,7 @@ const white = {
 }
 
 const Home = () => (
-  <div>
+  <Fragment>
     <Container>
       <Head title="Home" />
       <div style={style}>
@@ -46,7 +46,7 @@ const Home = () => (
       </div>
     </Container>
     <ContactUs />
-  </div>
+  </Fragment>
 )
 
 export default Home
