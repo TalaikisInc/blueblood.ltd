@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{280:function(e,t,n){"use strict";n.r(t);var a=n(0),l=n.n(a),o={textAlign:"center",padding:"10%"},c={fontSize:"0.8em",fontFamily:"'Open Sans', sans-serif"};t.default=function(){return l.a.createElement("div",{style:o},l.a.createElement("p",{style:c},"\xa9 2018, ",l.a.createElement("a",{href:"https://blueblood.ltd"},"Blue Blood")," | ",l.a.createElement("a",{href:"https://blockchain.talaikis.com/"},"Blockchain Development")))}}}]);
+//# sourceMappingURL=7.27cfd07e.chunk.js.map

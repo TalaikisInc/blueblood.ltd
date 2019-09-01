@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 
 import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
 import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
@@ -46,7 +46,7 @@ class Header extends PureComponent {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/BlueBloodLtd">
+                <NavLink href="https://github.com/TalaikisInc">
                   <FontAwesomeIcon style={style} icon={faGithub} />
                 </NavLink>
               </NavItem>

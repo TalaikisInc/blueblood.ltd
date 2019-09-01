@@ -4,8 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import ReactGA from 'react-ga'
 
 import Async from 'components/Async'
-import env from 'env'
-ReactGA.initialize(env.GA)
+
 const supportsHistory = 'pushState' in window.history
 const Home = Async(() => import('containers/Home'))
 const NotImplemented = Async(() => import('containers/NotImplemented'))
@@ -22,16 +21,32 @@ const style = {
 }
 
 class App extends PureComponent {
-  pageviewTracking() {
-    ReactGA.initialize(process.env.REACT_APP_GA)
-    ReactGA.pageview(window.location.pathName)
+  initGA () {
+    ReactGA.initialize(process.env.GA_TRACKING_ID)
+    // console.log('Initialized')
+  }
+
+  logPageView () {
+    ReactGA.set({ page: window.location.pathname })
+    ReactGA.pageview(window.location.pathname)
+    // console.log(`Logged: ${window.location.pathname}`)
+  }
+
+  componentDidMount () {
+    if (process.env.NODE_ENV === 'production') {
+      if (!window.GA_INITIALIZED) {
+        this.initGA()
+        window.GA_INITIALIZED = true
+      }
+      this.logPageView()
+    }
   }
 
   render() {
     return (
       <div>
         <div style={style}>
-          <BrowserRouter onUpdate={this.pageviewTracking} forceRefresh={!supportsHistory}>
+          <BrowserRouter forceRefresh={!supportsHistory}>
             <div>
               <Header />
               <Switch>
