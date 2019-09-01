@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{228:function(e,t,n){"use strict";n.r(t);var l=n(0),a=n.n(l),u=n(248);t.default=function(e){return a.a.createElement(u.Helmet,null,a.a.createElement("meta",{charSet:"utf-8"}),a.a.createElement("title",null,e.title," | BlueBlood Web Development"))}}}]);
-//# sourceMappingURL=0.814b2415.chunk.js.map

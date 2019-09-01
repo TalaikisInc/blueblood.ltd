@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# [Blue Blood Website](https://blueblood.ltd/)
+# [Blue Blood Website](https://blueblood.talaikis.com/)
 
 ## How to start
 

@@ -1,0 +1,2 @@
+(window["webpackJsonpblue-blood-web"]=window["webpackJsonpblue-blood-web"]||[]).push([[10],{252:function(e,t,n){"use strict";n.r(t);var a=n(0),l=n.n(a),o={textAlign:"center",padding:"10%"},i={fontSize:"0.8em",fontFamily:"'Open Sans', sans-serif"};t.default=function(){return l.a.createElement("div",{style:o},l.a.createElement("p",{style:i},"\xa9 2019, ",l.a.createElement("a",{href:"https://talaikis.com"},"Developer")," | ",l.a.createElement("a",{href:"https://blockchain.talaikis.com/"},"Blockchain Development")))}}}]);
+//# sourceMappingURL=10.00f11d68.chunk.js.map
